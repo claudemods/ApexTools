@@ -18,8 +18,8 @@
 
 <div align="center">
 
-[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&label=XeroLinux&color=3399FF&Linux&logo=ko-fi&logoColor=white)](https://ko-fi.com/XeroLinux)
-[![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&label=XeroLinux&color=A836FF&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/xerolinux)</div>
+[![Ko-Fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&label=claudemods&color=3399FF&Linux&logo=ko-fi&logoColor=white)](https://ko-fi.com/claudemods)
+[![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&label=claudemods&color=A836FF&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/claudemods)</div>
 
 <div align="center">
 
