@@ -1,4 +1,4 @@
-<h1 align="center">Official Github Space For...</h1>
+]<h1 align="center">Official Github Space For...</h1>
 
 <p align="center">
     <img width="750" src="https://i.imgur.com/ELSTr7x.png" alt="logo">
@@ -22,14 +22,13 @@
 [![GitHub Sponsors](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&label=claudemods&color=A836FF&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/claudemods)</div>
 
 <div align="center">
-
-![G33k](https://i.imgur.com/z1gHBMm.jpeg)
-
 claudemods Apex Tools v1.0 Built On Hyprland
-contains Apex Gamester and Apex Recovery 
+contains Apex Gamester and Apex Recovery
 their will be 1 Application Apex Recovery And 2 isos
 1 will be a custom iso For The Desktop with lots installed which will also contain Apex Recovery
 2 will be a custom iso for the Recovery with minimal installed This will Also Contain The Desktop
+
+![G33k](https://i.imgur.com/z1gHBMm.jpeg)
 
 </div>
 
