@@ -34,7 +34,7 @@ their will be 1 Application Apex Recovery And 2 isos
 
 <div align="center">
 
-<h2 align="center">.:: Connect with us on Social ::.</h2>
+<h2 align="center"> Connect with us on Social </h2>
 
 <div align="center">
 
