@@ -9,8 +9,7 @@
 
 <div align = center>
 <img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" width="450" height="250" alt="banner">
-align = center>
-https://hyprland.org/
+
 <br>
 
 <div align="center">
