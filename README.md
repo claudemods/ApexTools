@@ -1,5 +1,3 @@
-<h1 align="center">Official Github For...</h1>
-
 <p align="center">
     <img width="750" src="https://i.imgur.com/ELSTr7x.png" alt="logo">
 </p>
@@ -8,6 +6,7 @@
 
   <a href="https://www.linux.org" target="_blank"><img src="https://img.shields.io/badge/OS-Linux-e06c75?style=for-the-badge&logo=linux" /></a>
 	<a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Arch-56b6c2?style=for-the-badge&logo=arch-linux" /></a>
+     <a href="https://hyprland.org" target"_blank"><img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" width="100" height="`100" /></a>
 </div>
 
 <div align="center">
