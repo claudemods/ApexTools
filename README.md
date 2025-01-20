@@ -6,8 +6,8 @@
 
   <a href="https://www.linux.org" target="_blank"><img src="https://img.shields.io/badge/OS-Linux-e06c75?style=for-the-badge&logo=linux" /></a>
 	<a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Arch-56b6c2?style=for-the-badge&logo=arch-linux" /></a>
-
-<a href="https://hyprland.org" target"_blank"><img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" /></a>
+<div align="center">
+<a href="https://hyprland.org"  src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" /></a>
 </div>
 
 <div align="center">
