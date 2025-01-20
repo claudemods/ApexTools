@@ -1,4 +1,4 @@
-]<h1 align="center">Official Github Space For...</h1>
+<h1 align="center">Official Github Space For...</h1>
 
 <p align="center">
     <img width="750" src="https://i.imgur.com/ELSTr7x.png" alt="logo">
@@ -12,7 +12,7 @@
 
 <div align="center">
 
-## [.:: Support Me ::.](https://www.paypal.com/paypalme/claudemods?country.x=GB&locale)
+## [ Support Me ](https://www.paypal.com/paypalme/claudemods?country.x=GB&locale)
 
 </div>
 
