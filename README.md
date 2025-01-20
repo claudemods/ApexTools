@@ -43,7 +43,7 @@ currently no release date more being tested and added check back soon
 
 <div align="center">
 
-<h2 align="center"> Connect with us on Social </h2>
+<h2 align="center"> Connect With Me On Social </h2>
 
 <div align="center">
 
