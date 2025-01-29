@@ -6,10 +6,15 @@
 
   <a href="https://www.linux.org" target="_blank"><img src="https://img.shields.io/badge/OS-Linux-e06c75?style=for-the-badge&logo=linux" /></a>
 	<a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Arch-56b6c2?style=for-the-badge&logo=arch-linux" /></a>
-<a href="https://chat.deepseek.com/" target="_blank">
-  <img src="https://img.shields.io/badge/Built_Using-DeepSeek-blue?style=for-the-badge&logo=deepseek&logoColor=white" alt="Built Using DeepSeek">
+</a>
+  <a href="https://chat.deepseek.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Built_Using-DeepSeek-4D6BFE?style=for-the-badge&logo=deepseek&logoColor=4D6BFE" alt="Built Using DeepSeek">
   <img src="https://i.postimg.cc/ydBbyvRt/Deepseek.jpg" alt="DeepSeek Logo" style="height: 30px; vertical-align: middle;">
 </a>
+
+<div align="center">
+
+[![Version](https://img.shields.io/github/v/release/claudemods/ApexTools?color=FFD700&label=Latest%20Release&style=for-the-badge)](https://github.com/claudemods/ApexTools/releases/tag/v1.06.1-build-26-01-2025)
 <div align = center>
 <img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" width="450" height="250" alt="banner">
 
