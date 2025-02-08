@@ -38,18 +38,20 @@
 
 <div align="center">
 claudemods Apex Tools v1.0 Built On Arch And Cachyos Repos With Hyprland
+	<div align="center">
 contains Apex Gamester and Apex Recovery
-
+<div align="center">
 their will be 1 Application Apex Recovery And 2 isos
 
-
-
+<div align="center">
 1 will be a custom iso For The Desktop with lots installed
+	<div align="center">
 which will also contain Apex Recovery
-
+<div align="center">
 2 will be a custom iso for the Recovery
+	<div align="center">
 with minimal installed This will Also Contain The Desktop
-
+<div align="center">
 currently no release date more being tested and added check back soon
 </div>
 
