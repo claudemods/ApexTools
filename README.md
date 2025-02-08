@@ -1,7 +1,8 @@
 <p align="center">
     <img width="750" src="https://i.imgur.com/ELSTr7x.png" alt="logo">
 </p>
-
+<div align="center">
+<img width="120" src="https://i.postimg.cc/50LtZkq8/Apex-Browser.png" alt="logo">
 <div align="center">
 
   <a href="https://www.linux.org" target="_blank"><img src="https://img.shields.io/badge/OS-Linux-e06c75?style=for-the-badge&logo=linux" /></a>
