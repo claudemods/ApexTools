@@ -42,15 +42,6 @@ their will be 1 Application Apex Recovery And 2 isos
 
 
 
-![G33k](https://i.imgur.com/z1gHBMm.jpeg)
-
-Custom Firefox With Extra extentions
-![Screenshot_archlinux_2025-02-08_00:20:13](https://github.com/user-attachments/assets/3ccfd7fe-da45-4240-89b9-3b9a4b932196)
-
-Apex Browser
-![2025-02-05-161021_hyprshot](https://github.com/user-attachments/assets/6e20b1ff-3729-4ca1-a5d9-704eca05d7ca)
-
-
 1 will be a custom iso For The Desktop with lots installed
 which will also contain Apex Recovery
 
