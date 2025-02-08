@@ -16,6 +16,7 @@
 </a>
 
 <div align="center">
+	
 [![Version](https://img.shields.io/github/v/release/claudemods/ApexTools?color=FFD700&label=Latest%20Release&style=for-the-badge)]()
 <div align = center>
 <img src="https://raw.githubusercontent.com/hyprwm/Hyprland/main/assets/header.svg" width="450" height="250" alt="banner">
