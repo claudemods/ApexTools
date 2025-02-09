@@ -58,7 +58,7 @@ currently no release date more being tested and added check back soon
 <div align="center">
 More Work To Be Done But Its Becoming a Finishing Product Update By Update
 <div align="center">
-Build 09-02-2025 05:05 Contains The New Grid Layout For Applications And Also fixes the konsole shutdown and reboot functions
+Build 09-02-2025 05:05 Contains The New Grid Layout For Applications And Also fixes the konsole, update, shutdown and reboot functions
 
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
 ![2025-02-09-045841_hyprshot](https://github.com/user-attachments/assets/832065d6-521b-4fe7-aae0-a5ec77ce5d09)
