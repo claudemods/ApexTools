@@ -1,0 +1,7 @@
+Files Menu: org.kde.dolphin.desktop
+Web Apps Menu: firefox.desktop
+Music Apps Menu: vlc.desktop
+Gaming Apps Menu: steam.desktop
+Photo Editing Menu: inkscape.desktop
+System Settings: org.kde.systemsettings.desktop
+System Information: org.kde.kinfocenter.desktop
