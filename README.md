@@ -72,7 +72,8 @@ slight error with volume in middle but i am fixing this now before i upload the 
 <div align="center">
 Main Menu
 	
-![2025-03-07-040338_hyprshot](https://github.com/user-attachments/assets/d9ef2ae7-f595-4cd3-a26c-1922300b37d2)
+![gamester](https://github.com/user-attachments/assets/77321796-1511-41dc-b2cd-823d6468a5c8)
+
 	<div align="center">
 Custom Basic Browser will be switched hopefully to apex browser soon 
 	
