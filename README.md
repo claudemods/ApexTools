@@ -69,11 +69,20 @@ first photo was taken with screenshot button on top left doesnt it look nice
 slight error with volume in middle but i am fixing this now before i upload the new code and setup for aur
 	<div align="center">
 
-
+<div align="center">
+Main Menu
 ![2025-03-07-040338_hyprshot](https://github.com/user-attachments/assets/d9ef2ae7-f595-4cd3-a26c-1922300b37d2)
+	<div align="center">
+Custom Basic Rrowser
 ![2025-03-07-042220_hyprshot](https://github.com/user-attachments/assets/903e2ccc-1215-4374-96e0-12d74f7af69a)
+		<div align="center">
+Web Applications
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
+			<div align="center">
+Gaming ApplicationS
 ![2025-02-09-045841_hyprshot](https://github.com/user-attachments/assets/832065d6-521b-4fe7-aae0-a5ec77ce5d09)
+				<div align="center">
+Multiple Purpose Applications
 ![2025-02-09-045902_hyprshot](https://github.com/user-attachments/assets/d0e36519-0836-4974-a1d9-3531f461f551)
 
 
