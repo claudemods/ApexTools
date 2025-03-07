@@ -62,7 +62,7 @@ Build 07-03-2025
 	<div align="center">
 Contains The New fixes for volume function and added screenshot and screen recording option still being tested !!!
 
-![2025-03-07-040057_hyprshot](https://github.com/user-attachments/assets/64c9bead-6cd1-4a4d-b891-2cb9579d640b)
+![2025-03-07-040338_hyprshot](https://github.com/user-attachments/assets/d9ef2ae7-f595-4cd3-a26c-1922300b37d2)
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
 ![2025-02-09-045841_hyprshot](https://github.com/user-attachments/assets/832065d6-521b-4fe7-aae0-a5ec77ce5d09)
 ![2025-02-09-045902_hyprshot](https://github.com/user-attachments/assets/d0e36519-0836-4974-a1d9-3531f461f551)
