@@ -58,13 +58,17 @@ currently no release date more being tested and added check back soon
 <div align="center">
 More Work To Be Done But Its Becoming a Finishing Product Update By Update
 <div align="center">
-Build 07-03-2025  
+Currently Still Being Built Features Added so far in Build 07-03-2025  
 	<div align="center">
-Contains The New fixes for volume function and added screenshot and screen recording option still being tested !!!
+a new reboot signout and shutdown sound also a new application selection sound  
+	<div align="center">
+New fixes for volume function and added screenshot and screen recording option still being tested !!!
 <div align="center">
 first photo was taken with screenshot button on top left doesnt it look nice
 	<div align="center">
 slight error with volume in middle but i am fixing this now before i upload the new code and setup for aur
+	<div align="center">
+
 
 ![2025-03-07-040338_hyprshot](https://github.com/user-attachments/assets/d9ef2ae7-f595-4cd3-a26c-1922300b37d2)
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
