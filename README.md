@@ -58,9 +58,9 @@ currently no release date more being tested and added check back soon
 <div align="center">
 More Work To Be Done But Its Becoming a Finishing Product Update By Update
 <div align="center">
-Build 09-02-2025 05:05 Contains The New Grid Layout For Applications And Also fixes the konsole, update, shutdown and reboot functions
+Build 07-03-2025 05:05 Contains The New fixes for volume function and added screenshot and screen recording option still being tested !!!
 
-![Screenshot_archlinux_2025-02-11_23:04:59](https://github.com/user-attachments/assets/997f7566-751d-4a59-9ce7-3e3307ece762)
+![2025-03-07-035650_hyprshot](https://github.com/user-attachments/assets/5124fc4e-2573-4e83-b644-290dcb7ced95)
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
 ![2025-02-09-045841_hyprshot](https://github.com/user-attachments/assets/832065d6-521b-4fe7-aae0-a5ec77ce5d09)
 ![2025-02-09-045902_hyprshot](https://github.com/user-attachments/assets/d0e36519-0836-4974-a1d9-3531f461f551)
