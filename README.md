@@ -74,9 +74,16 @@ Main Menu
 	
 ![2025-03-07-040338_hyprshot](https://github.com/user-attachments/assets/d9ef2ae7-f595-4cd3-a26c-1922300b37d2)
 	<div align="center">
-Custom Basic Browser will be switch hopefully to apex browser soon 
+Custom Basic Browser will be switched hopefully to apex browser soon 
 	
 ![2025-03-07-042220_hyprshot](https://github.com/user-attachments/assets/903e2ccc-1215-4374-96e0-12d74f7af69a)
+		<div align="center">
+  <div align="center">
+Custom Basic Browser will be switched hopefully to apex browser soon 
+
+ This Is Apex Browser
+![2025-03-07-043432_hyprshot](https://github.com/user-attachments/assets/7e27c352-a871-4051-a99c-3b01c16327d0)
+
 		<div align="center">
 Web Applications
 			
