@@ -60,7 +60,7 @@ More Work To Be Done But Its Becoming a Finishing Product Update By Update
 <div align="center">
 Currently Still Being Built Features Added so far in Build 07-03-2025  
 	<div align="center">
-a new reboot signout and shutdown sound also a new application selection sound  
+a new reboot signout and shutdown sound also a new application selection sound new dialogs for reboot signout and shutdown buttons
 	<div align="center">
 New fixes for volume function and added screenshot and screen recording option still being tested !!!
 <div align="center">
