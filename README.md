@@ -58,7 +58,9 @@ currently no release date more being tested and added check back soon
 <div align="center">
 More Work To Be Done But Its Becoming a Finishing Product Update By Update
 <div align="center">
-Build 07-03-2025 05:05 Contains The New fixes for volume function and added screenshot and screen recording option still being tested !!!
+Build 07-03-2025  
+	<div align="center">
+Contains The New fixes for volume function and added screenshot and screen recording option still being tested !!!
 
 ![2025-03-07-035650_hyprshot](https://github.com/user-attachments/assets/5124fc4e-2573-4e83-b644-290dcb7ced95)
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
