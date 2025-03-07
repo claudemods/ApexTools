@@ -82,7 +82,7 @@ Web Applications
 			
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
 			<div align="center">
-Gaming ApplicationS
+Gaming Applications
 				
 ![2025-02-09-045841_hyprshot](https://github.com/user-attachments/assets/832065d6-521b-4fe7-aae0-a5ec77ce5d09)
 				<div align="center">
