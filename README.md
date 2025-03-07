@@ -84,7 +84,7 @@ Custom Basic Browser will be switched hopefully to apex browser soon
  This Is Apex Browser
 ![2025-03-07-043432_hyprshot](https://github.com/user-attachments/assets/7e27c352-a871-4051-a99c-3b01c16327d0)
 
-		<div align="center">
+<div align="center">
 Web Applications
 			
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
