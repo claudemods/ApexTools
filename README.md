@@ -61,6 +61,8 @@ More Work To Be Done But Its Becoming a Finishing Product Update By Update
 Build 07-03-2025  
 	<div align="center">
 Contains The New fixes for volume function and added screenshot and screen recording option still being tested !!!
+<div align="center">
+first photo was taken with screenshot button on top left doesnt it look nice
 
 ![2025-03-07-040338_hyprshot](https://github.com/user-attachments/assets/d9ef2ae7-f595-4cd3-a26c-1922300b37d2)
 ![2025-02-09-045823_hyprshot](https://github.com/user-attachments/assets/dc0b615e-5486-449c-9fb4-323bf3b0045a)
