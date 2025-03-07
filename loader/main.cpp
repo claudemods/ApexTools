@@ -315,7 +315,7 @@ private:
     void launchArchInstaller() {
         // Launch ArchInstaller script
         QProcess *process = new QProcess(this);
-        process->start("bash", QStringList() << "-c" << "cd /opt/claudemods-ArchInstaller/v1.2 && hyprctl dispatch workspace 3 && konsole -e sudo ArchInstaller.bin");
+        process->start("bash", QStringList() << "-c" << "hyprctl dispatch workspace 3 && /usr/bin/apexinstallgui");
 
         // Handle process completion
         connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, process](int exitCode, QProcess::ExitStatus exitStatus) {
@@ -432,7 +432,7 @@ public:
 
         // Create image buttons
         ImageButton *button1 = new ImageButton("images/gamester.png", "Apex Gamester", backgroundWidget);
-        ImageButton *button2 = new ImageButton("images/isocreator.png", "Iso Creator", backgroundWidget);
+        ImageButton *button2 = new ImageButton("images/isocreator.png", "Iso Creator Gui", backgroundWidget);
         ImageButton *button3 = new ImageButton("images/recovery.png", "Apex Recovery", backgroundWidget);
 
         // Connect button clicks to actions
@@ -452,7 +452,7 @@ public:
         overlayLayout->addStretch();
 
         // Add the version label in the bottom-right corner
-        QLabel *versionLabel = new QLabel("Apex Tools v1.0 Build 11-02-2025", backgroundWidget);
+        QLabel *versionLabel = new QLabel("Apex Tools v1.0 Build 07-03-2025", backgroundWidget);
         versionLabel->setAlignment(Qt::AlignRight | Qt::AlignBottom);
         versionLabel->setStyleSheet("font-size: 20px; color: gold; padding: 10px;");
 
@@ -475,7 +475,7 @@ public:
 private slots:
     void launchApexGamester() {
         QProcess *process = new QProcess(this);
-        process->start("bash", QStringList() << "-c" << "/opt/claudemods-ApexTools/ApexGamester/launchgamester.sh");
+        process->start("bash", QStringList() << "-c" << "/usr/bin/claudemods-ApexTools/ApexGamester/launchgamester.sh");
         connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, process](int exitCode, QProcess::ExitStatus exitStatus) {
             if (exitStatus == QProcess::CrashExit || exitCode != 0) {
                 QMessageBox::critical(this, "Error", "Failed to start Apex Gamester.");
@@ -486,7 +486,7 @@ private slots:
 
     void launchIsoCreator() {
         QProcess *process = new QProcess(this);
-        process->start("bash", QStringList() << "-c" << "hyprctl dispatch workspace 2 && konsole -e ruby /opt/claudemods-iso-konsole-script/Launch-MainMenus.rb");
+        process->start("bash", QStringList() << "-c" << "hyprctl dispatch workspace 2 && /usr/bin/apexisocreatorgui");
         connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, process](int exitCode, QProcess::ExitStatus exitStatus) {
             if (exitStatus == QProcess::CrashExit || exitCode != 0) {
                 QMessageBox::critical(this, "Error", "Failed to start Iso Creator.");
