@@ -75,6 +75,8 @@ private slots:
     void openBrowserTab();
     void closeBrowserTab();
     void onVolumeSliderValueChanged(int value);
+    void handleScreenshotClick();
+    void handleRecordClick();
 
 private:
     QLineEdit *searchBar;
@@ -98,6 +100,8 @@ private:
     QPushButton *playPauseButton;
     QPushButton *pickMusicButton;
     QPushButton *chooseBackgroundButton;
+    QPushButton *screenshotButton;
+    QPushButton *recordButton;
     QComboBox *musicDropdown;
     QComboBox *backgroundDropdown;
     QMediaPlayer *musicPlayer;
@@ -111,6 +115,7 @@ private:
     QList<QProcess*> activeProcesses; // Track active processes
     QSlider *volumeSlider;
     QLabel *volumePercentageLabel; // Label to display volume percentage
+    bool isRecording;
 
     QString readImagePathFromFile(const QString &filePath);
     void setBackgroundImage(const QString &imagePath);
@@ -131,7 +136,7 @@ private:
     void playSound(const QString &soundFile);
 };
 
-AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), activeMenuButton(nullptr) {
+AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), activeMenuButton(nullptr), isRecording(false) {
     setWindowState(Qt::WindowFullScreen);
 
     mainLayout = new QVBoxLayout(this);
@@ -165,6 +170,24 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     connect(terminalButton, &QPushButton::clicked, this, &AppLauncher::handleOpenTerminal);
     topBarLayout->addWidget(terminalButton, 0, Qt::AlignLeft);
 
+    screenshotButton = new QPushButton(mainWidget);
+    screenshotButton->setIcon(QIcon("icons/screenshot.png"));
+    screenshotButton->setIconSize(QSize(32, 32));
+    screenshotButton->setFixedSize(40, 40);
+    screenshotButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
+    screenshotButton->setToolTip("Take Screenshot");
+    connect(screenshotButton, &QPushButton::clicked, this, &AppLauncher::handleScreenshotClick);
+    topBarLayout->addWidget(screenshotButton, 0, Qt::AlignLeft);
+
+    recordButton = new QPushButton(mainWidget);
+    recordButton->setIcon(QIcon("icons/record.png"));
+    recordButton->setIconSize(QSize(32, 32));
+    recordButton->setFixedSize(40, 40);
+    recordButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
+    recordButton->setToolTip("Record Screen");
+    connect(recordButton, &QPushButton::clicked, this, &AppLauncher::handleRecordClick);
+    topBarLayout->addWidget(recordButton, 0, Qt::AlignLeft);
+
     topBarLayout->addStretch();
 
     updateButton = new QPushButton(mainWidget);
@@ -176,6 +199,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     connect(updateButton, &QPushButton::clicked, this, &AppLauncher::handleUpdateSystem);
     topBarLayout->addWidget(updateButton, 0, Qt::AlignRight);
 
+    // Volume button and slider
     volumeButton = new QPushButton(mainWidget);
     volumeButton->setIcon(QIcon("icons/sound.png"));
     volumeButton->setIconSize(QSize(32, 32));
@@ -185,31 +209,30 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     connect(volumeButton, &QPushButton::clicked, this, &AppLauncher::handleChangeVolume);
     topBarLayout->addWidget(volumeButton, 0, Qt::AlignRight);
 
-    // Volume slider and percentage label
+    // Volume slider layout below the volume button
+    QVBoxLayout *volumeSliderLayout = new QVBoxLayout();
+    volumeSliderLayout->setAlignment(Qt::AlignRight);
+    volumeSliderLayout->setSpacing(0);
+    volumeSliderLayout->setContentsMargins(0, 0, 0, 0);
+
     volumeSlider = new QSlider(Qt::Horizontal, this);
-    volumeSlider->setRange(0, 100); // Range from 0 to 100
-    volumeSlider->setSingleStep(10); // Increment in steps of 10
-    volumeSlider->setPageStep(10);   // Page step of 10
+    volumeSlider->setRange(0, 100);
+    volumeSlider->setSingleStep(10);
+    volumeSlider->setPageStep(10);
     volumeSlider->setStyleSheet(
         "QSlider::groove:horizontal { background: gold; height: 10px; border-radius: 5px; } "
         "QSlider::handle:horizontal { background: teal; width: 20px; height: 20px; margin: -5px 0; border-radius: 10px; }"
     );
     volumeSlider->setVisible(false); // Initially hidden
+    connect(volumeSlider, &QSlider::valueChanged, this, &AppLauncher::onVolumeSliderValueChanged);
 
-    volumePercentageLabel = new QLabel(this);
+    volumeSliderLayout->addWidget(volumeSlider);
+    topBarLayout->addLayout(volumeSliderLayout);
+
+    volumePercentageLabel = new QLabel("100%", mainWidget);
     volumePercentageLabel->setStyleSheet("QLabel { color: gold; font-size: 16px; }");
     volumePercentageLabel->setAlignment(Qt::AlignCenter);
-    volumePercentageLabel->setVisible(false); // Initially hidden
-
-    // Add the slider and label to a vertical layout
-    QVBoxLayout *volumeSliderLayout = new QVBoxLayout();
-    volumeSliderLayout->setSpacing(0); // No space between slider and label
-    volumeSliderLayout->setContentsMargins(0, 0, 0, 0); // No margins
-    volumeSliderLayout->addWidget(volumeSlider);
-    volumeSliderLayout->addWidget(volumePercentageLabel);
-
-    // Add the volume slider layout to the top bar
-    topBarLayout->addLayout(volumeSliderLayout);
+    topBarLayout->addWidget(volumePercentageLabel, 0, Qt::AlignRight);
 
     systemMenuButton = new QPushButton(mainWidget);
     systemMenuButton->setIcon(QIcon("icons/systemmenu.png"));
@@ -1042,7 +1065,6 @@ void AppLauncher::handleUpdateSystem() {
 
 void AppLauncher::handleChangeVolume() {
     volumeSlider->setVisible(!volumeSlider->isVisible());
-    volumePercentageLabel->setVisible(!volumePercentageLabel->isVisible());
 }
 
 void AppLauncher::onVolumeSliderValueChanged(int value) {
@@ -1165,6 +1187,32 @@ void AppLauncher::playSound(const QString &soundFile) {
     soundPlayer->play();
 }
 
+void AppLauncher::handleScreenshotClick() {
+    QMessageBox::information(this, "Screenshot", "Press OK and click a window to take a screenshot.");
+    executeBashCommand("hyprshot -m window");
+}
+
+void AppLauncher::handleRecordClick() {
+    if (isRecording) {
+        // Stop recording
+        executeBashCommand("pkill ffmpeg");
+        isRecording = false;
+        recordButton->setIcon(QIcon("icons/record.png"));
+        recordButton->setToolTip("Record Screen");
+        QMessageBox::information(this, "Recording Saved", "Video saved in " + QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
+    } else {
+        // Start recording
+        QMessageBox::StandardButton reply = QMessageBox::question(this, "Record Screen", "Do you want to record your screen and mic?", QMessageBox::Yes | QMessageBox::No);
+        if (reply == QMessageBox::Yes) {
+            isRecording = true;
+            recordButton->setIcon(QIcon("icons/pauserecord.png"));
+            recordButton->setToolTip("Pause Recording");
+            QString outputFile = QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/recording.mp4";
+            executeBashCommand("ffmpeg -f x11grab -video_size 1920x1080 -framerate 30 -i :0.0 -f pulse -i default -c:v libx264 -preset ultrafast -c:a aac " + outputFile);
+        }
+    }
+}
+
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     AppLauncher launcher;
@@ -1172,4 +1220,4 @@ int main(int argc, char *argv[]) {
     return app.exec();
 }
 
-#include "main.moc"
+#include "main.moc”
