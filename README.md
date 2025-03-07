@@ -66,7 +66,7 @@ New fixes for volume function and added screenshot and screen recording option s
 <div align="center">
 first photo was taken with screenshot button on top left doesnt it look nice
 	<div align="center">
-slight error with volume in middle but i am fixing this now before i upload the new code and setup for aur
+i will upload the new code and setup for aur
 	<div align="center">
 
 <div align="center">
