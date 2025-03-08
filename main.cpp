@@ -336,19 +336,19 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
 
     menuMap["Web Apps Menu"] = {
         {"Firefox", {"/usr/lib/firefox/firefox", "/usr/share/icons/hicolor/scalable/apps/firefox.svg"}},
-        {"ApexBrowser", {"/home/apex/.local/share/bauh/appimage/installed/apexbrowser/ApexBrowser-Arch-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/apexbrowser/logo.png"}},
-        {"Facebook", {"/home/apex/.local/share/bauh/appimage/installed/facebook/Facebook-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/facebook/logo.png"}},
-        {"Facebook Messenger", {"/home/apex/.local/share/bauh/appimage/installed/fb/Fb-Messenger-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/fb/logo.png"}},
-        {"WhatsApp", {"/home/apex/.local/share/bauh/appimage/installed/whatsapp/WhatsApp-Web-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/whatsapp/logo.png"}},
-        {"Telegram", {"/home/apex/.local/share/bauh/appimage/installed/telegram/Telegram-Desktop-x86-64-20240902125404.AppImage", "/home/apex/.local/share/bauh/appimage/installed/telegram/logo.png"}},
-        {"Discord", {"/home/apex/.local/share/bauh/appimage/installed/discord/Discord-Arch-Debian-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/discord/logo.png"}},
-        {"KDE Pling Store", {"/home/apex/.local/share/bauh/appimage/installed/kde/Kde-Store-Viewer-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/kde/logo.svg"}},
-        {"YouTube And Downloader", {"/home/apex/.local/share/bauh/appimage/installed/youtube/youtube-appimage-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/youtube/logo.png"}},
-        {"DeepSeek", {"/home/apex/.local/share/bauh/appimage/installed/deepseek/DeepSeek-Arch-qt6-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/deepseek/logo.png"}},
-        {"QwenAI", {"/home/apex/.local/share/bauh/appimage/installed/qwenai/QwenAi-Arch-Gtk-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/qwenai/logo.png"}},
-        {"Gemini", {"/home/apex/.local/share/bauh/appimage/installed/gemini/Gemini-Arch-Qt6-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/gemini/logo.png"}},
-        {"ChatGPT", {"/home/apex/.local/share/bauh/appimage/installed/chatgpt/ChatGpt-Arch-Qt6-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/chatgpt/logo.png"}},
-        {"qBittorrent", {"/home/apex/.local/share/bauh/appimage/installed/qbittorrent/qbittorrent-5.0.3_lt20_x86_64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/qbittorrent/logo.png"}}
+        {"ApexBrowser", {"/usr/bin/apextools/bauh/appimage/installed/apexbrowser/ApexBrowser-Arch-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/apexbrowser/logo.png"}},
+        {"Facebook", {"/usr/bin/apextools/bauh/appimage/installed/facebook/Facebook-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/facebook/logo.png"}},
+        {"Facebook Messenger", {"/usr/bin/apextools/bauh/appimage/installed/fb/Fb-Messenger-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/fb/logo.png"}},
+        {"WhatsApp", {"/usr/bin/apextools/bauh/appimage/installed/whatsapp/WhatsApp-Web-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/whatsapp/logo.png"}},
+        {"Telegram", {"/usr/bin/apextools/bauh/appimage/installed/telegram/Telegram-Desktop-x86-64-20240902125404.AppImage", "/usr/bin/apextools/bauh/appimage/installed/telegram/logo.png"}},
+        {"Discord", {"/usr/bin/apextools/bauh/appimage/installed/discord/Discord-Arch-Debian-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/discord/logo.png"}},
+        {"KDE Pling Store", {"/usr/bin/apextools/bauh/appimage/installed/kde/Kde-Store-Viewer-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/kde/logo.svg"}},
+        {"YouTube And Downloader", {"/usr/bin/apextools/bauh/appimage/installed/youtube/youtube-appimage-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/youtube/logo.png"}},
+        {"DeepSeek", {"/usr/bin/apextools/bauh/appimage/installed/deepseek/DeepSeek-Arch-qt6-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/deepseek/logo.png"}},
+        {"QwenAI", {"/usr/bin/apextools/bauh/appimage/installed/qwenai/QwenAi-Arch-Gtk-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/qwenai/logo.png"}},
+        {"Gemini", {"/usr/bin/apextools/bauh/appimage/installed/gemini/Gemini-Arch-Qt6-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/gemini/logo.png"}},
+        {"ChatGPT", {"/usr/bin/apextools/bauh/appimage/installed/chatgpt/ChatGpt-Arch-Qt6-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/chatgpt/logo.png"}},
+        {"qBittorrent", {"/usr/bin/apextools/bauh/appimage/installed/qbittorrent/qbittorrent-5.0.3_lt20_x86_64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/qbittorrent/logo.png"}}
     };
 
     menuMap["Music Applications"] = {
@@ -373,18 +373,19 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     menuMap["Multi Purpose Applications"] = {
         {"Kate", {"kate", "/usr/share/icons/hicolor/scalable/apps/kate.svg"}},
         {"Virt-Manager", {"virt-manager", "/usr/share/icons/breeze/apps/48/virt-manager.svg"}},
+        {"gnome-boxes", {"gnome-boxes", "/usr/share/icons/hicolor/scalable/apps/org.gnome.Boxes.svg"}},
         {"Piper", {"piper", "/usr/share/icons/hicolor/scalable/apps/org.freedesktop.Piper.svg"}},
         {"OBS Studio", {"obs", "/usr/share/icons/hicolor/512x512/apps/com.obsproject.Studio.png"}},
-        {"Qalculate", {"/home/apex/.local/share/bauh/appimage/installed/qalculate/qalculate-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/qalculate/logo.png"}},
-        {"Bauh", {"/home/apex/.local/share/bauh/appimage/installed/bauh/bauh-0.10.7-x86_64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/bauh/logo.svg"}}
+        {"Qalculate", {"/usr/bin/apextools/bauh/appimage/installed/qalculate/qalculate-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/qalculate/logo.png"}},
+        {"Bauh", {"/usr/bin/apextools/bauh/appimage/installed/bauh/bauh-0.10.7-x86_64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/bauh/logo.svg"}}
     };
 
     menuMap["System Information"] = {
-        {"DNS Manager", {"/home/apex/.local/share/bauh/appimage/installed/dns/", "/home/apex/.local/share/bauh/appimage/installed/dns/logo.png"}},
-        {"Stacer", {"/home/apex/.local/share/bauh/appimage/installed/stacer/Stacer-1.1.0-x64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/stacer/logo.png"}},
+        {"DNS Manager", {"/usr/bin/apextools/bauh/appimage/installed/dns/", "/usr/bin/apextools/bauh/appimage/installed/dns/logo.png"}},
+        {"Stacer", {"/usr/bin/apextools/bauh/appimage/installed/stacer/Stacer-1.1.0-x64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/stacer/logo.png"}},
         {"GParted", {"sudo --preserve-env gparted", "/usr/share/icons/hicolor/scalable/apps/gparted.svg"}},
-        {"Arch Mirror Changer", {"/home/apex/.local/share/bauh/appimage/installed/archmirrorchangergui/ArchMirrorChangerGui-x86-64.AppImage", "/home/apex/.local/share/bauh/appimage/installed/archmirrorchangergui/logo.png"}},
-        {"System Info Centre", {"/opt/claudemods-ApexTools/ApexGamester/SystemInfo.bin", "/home/apex/.local/share/bauh/appimage/installed/apexbrowser/logo.png"}}
+        {"Arch Mirror Changer", {"/usr/bin/apextools/bauh/appimage/installed/archmirrorchangergui/ArchMirrorChangerGui-x86-64.AppImage", "/usr/bin/apextools/bauh/appimage/installed/archmirrorchangergui/logo.png"}},
+        {"System Info Centre", {"/opt/claudemods-ApexTools/ApexGamester/SystemInfo.bin", "/usr/bin/apextools/bauh/appimage/installed/apexbrowser/logo.png"}}
     };
 
     // Middle button layout
