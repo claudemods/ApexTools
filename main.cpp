@@ -437,7 +437,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     mainWidgetLayout->addLayout(dropdownLayout);
 
     // Version label
-    versionLabel = new QLabel("Apex Gamester v1.0 build 11-02-2025 ", mainWidget);
+    versionLabel = new QLabel("Apex Gamester v1.0 build 07-03-2025 ", mainWidget);
     versionLabel->setStyleSheet("QLabel { color: gold; font-size: 20px; text-decoration: underline; font-weight: bold; } QLabel:hover { color: white; text-decoration: none; }");
     versionLabel->setAlignment(Qt::AlignRight | Qt::AlignBottom);
     versionLabel->setCursor(Qt::PointingHandCursor);
