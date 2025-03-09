@@ -1,1 +1,35 @@
+<RCC>
+    <qresource prefix="/">
+        <!-- Icons -->
+        <file>icons/terminal.png</file>
+        <file>icons/screenshot.png</file>
+        <file>icons/record.png</file>
+        <file>icons/update.png</file>
+        <file>icons/sound.png</file>
+        <file>icons/systemmenu.png</file>
+        <file>icons/files.png</file>
+        <file>icons/webapps.png</file>
+        <file>icons/musicapps.png</file>
+        <file>icons/gamingapps.png</file>
+        <file>icons/photo editing.png</file>
+        <file>icons/settings.png</file>
+        <file>icons/information.png</file>
+        <file>icons/play.png</file>
+        <file>icons/pause.png</file>
+        <file>icons/pickmusic.png</file>
+        <file>icons/choose.png</file>
+        <file>icons/back.png</file>
+        <file>icons/forward.png</file>
+        <file>icons/refresh.png</file>
+        <file>icons/save.png</file>
+        <file>icons/bookmark.png</file>
+        <file>icons/hide.png</file>
+        <file>icons/search.png</file>
+        <file>icons/pauserecord.png</file>
 
+        <!-- Sounds -->
+        <file>sounds/click.mp3</file>
+        <file>sounds/choice.mp3</file>
+        <file>sounds/shutdown.mp3</file>
+    </qresource>
+</RCC>
