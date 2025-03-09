@@ -162,7 +162,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     topBarLayout->setContentsMargins(10, 10, 10, 0);
 
     terminalButton = new QPushButton(mainWidget);
-    terminalButton->setIcon(QIcon("icons/terminal.png"));
+    terminalButton->setIcon(QIcon(":/icons/terminal.png"));
     terminalButton->setIconSize(QSize(32, 32));
     terminalButton->setFixedSize(40, 40);
     terminalButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
@@ -171,7 +171,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     topBarLayout->addWidget(terminalButton, 0, Qt::AlignLeft);
 
     screenshotButton = new QPushButton(mainWidget);
-    screenshotButton->setIcon(QIcon("icons/screenshot.png"));
+    screenshotButton->setIcon(QIcon(":/icons/screenshot.png"));
     screenshotButton->setIconSize(QSize(32, 32));
     screenshotButton->setFixedSize(40, 40);
     screenshotButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
@@ -180,7 +180,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     topBarLayout->addWidget(screenshotButton, 0, Qt::AlignLeft);
 
     recordButton = new QPushButton(mainWidget);
-    recordButton->setIcon(QIcon("icons/record.png"));
+    recordButton->setIcon(QIcon(":/icons/record.png"));
     recordButton->setIconSize(QSize(32, 32));
     recordButton->setFixedSize(40, 40);
     recordButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
@@ -191,7 +191,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     topBarLayout->addStretch();
 
     updateButton = new QPushButton(mainWidget);
-    updateButton->setIcon(QIcon("icons/update.png"));
+    updateButton->setIcon(QIcon(":/icons/update.png"));
     updateButton->setIconSize(QSize(32, 32));
     updateButton->setFixedSize(40, 40);
     updateButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
@@ -201,7 +201,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
 
     // Volume button and slider
     volumeButton = new QPushButton(mainWidget);
-    volumeButton->setIcon(QIcon("icons/sound.png"));
+    volumeButton->setIcon(QIcon(":/icons/sound.png"));
     volumeButton->setIconSize(QSize(32, 32));
     volumeButton->setFixedSize(40, 40);
     volumeButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
@@ -235,7 +235,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     topBarLayout->addWidget(volumePercentageLabel, 0, Qt::AlignRight);
 
     systemMenuButton = new QPushButton(mainWidget);
-    systemMenuButton->setIcon(QIcon("icons/systemmenu.png"));
+    systemMenuButton->setIcon(QIcon(":/icons/systemmenu.png"));
     systemMenuButton->setIconSize(QSize(32, 32));
     systemMenuButton->setFixedSize(40, 40);
     systemMenuButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
@@ -286,13 +286,13 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     bottomIconsLayout->setSpacing(0);
     bottomIconsLayout->setContentsMargins(0, 0, 0, 0);
 
-    addIconButton(bottomIconsLayout, "icons/files.png", "File Applications", SLOT(handleFilesClick()));
-    addIconButton(bottomIconsLayout, "icons/webapps.png", "Web Applications", SLOT(handleWebAppsClick()));
-    addIconButton(bottomIconsLayout, "icons/musicapps.png", "Music Applications", SLOT(handleMusicAppsClick()));
-    addIconButton(bottomIconsLayout, "icons/gamingapps.png", "Gaming Applications", SLOT(handleGamingAppsClick()));
-    addIconButton(bottomIconsLayout, "icons/photo editing.png", "Photo Editing Applications", SLOT(handlePhotoEditingClick()));
-    addIconButton(bottomIconsLayout, "icons/settings.png", "Multi Purpose Applications", SLOT(handleMultiPurposeAppsClick()));
-    addIconButton(bottomIconsLayout, "icons/information.png", "System Information", SLOT(handleInformationClick()));
+    addIconButton(bottomIconsLayout, ":/icons/files.png", "File Applications", SLOT(handleFilesClick()));
+    addIconButton(bottomIconsLayout, ":/icons/webapps.png", "Web Applications", SLOT(handleWebAppsClick()));
+    addIconButton(bottomIconsLayout, ":/icons/musicapps.png", "Music Applications", SLOT(handleMusicAppsClick()));
+    addIconButton(bottomIconsLayout, ":/icons/gamingapps.png", "Gaming Applications", SLOT(handleGamingAppsClick()));
+    addIconButton(bottomIconsLayout, ":/icons/photo editing.png", "Photo Editing Applications", SLOT(handlePhotoEditingClick()));
+    addIconButton(bottomIconsLayout, ":/icons/settings.png", "Multi Purpose Applications", SLOT(handleMultiPurposeAppsClick()));
+    addIconButton(bottomIconsLayout, ":/icons/information.png", "System Information", SLOT(handleInformationClick()));
 
     mainWidgetLayout->addLayout(bottomIconsLayout);
 
@@ -327,7 +327,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     mediaPlayer = new QMediaPlayer(this);
     audioOutput = new QAudioOutput(this);
     mediaPlayer->setAudioOutput(audioOutput);
-    mediaPlayer->setSource(QUrl::fromLocalFile("sounds/click.mp3"));
+    mediaPlayer->setSource(QUrl("qrc:/sounds/click.mp3"));
 
     // Predefined menu structure with commands and icons
     menuMap["Files Menu"] = {
@@ -394,7 +394,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     middleButtonLayout->setSpacing(10);
 
     playPauseButton = new QPushButton(mainWidget);
-    playPauseButton->setIcon(QIcon("icons/play.png"));
+    playPauseButton->setIcon(QIcon(":/icons/play.png"));
     playPauseButton->setIconSize(QSize(32, 32));
     playPauseButton->setFixedSize(40, 40);
     playPauseButton->setStyleSheet("QPushButton { background-color: transparent; border: 2px solid gold; border-radius: 10px; padding: 5px; } QPushButton:hover { background-color: rgba(255, 215, 0, 50); border: 2px solid gold; }");
@@ -403,7 +403,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     middleButtonLayout->addWidget(playPauseButton);
 
     pickMusicButton = new QPushButton(mainWidget);
-    pickMusicButton->setIcon(QIcon("icons/pickmusic.png"));
+    pickMusicButton->setIcon(QIcon(":/icons/pickmusic.png"));
     pickMusicButton->setIconSize(QSize(32, 32));
     pickMusicButton->setFixedSize(40, 40);
     pickMusicButton->setStyleSheet("QPushButton { background-color: transparent; border: 2px solid gold; border-radius: 10px; padding: 5px; } QPushButton:hover { background-color: rgba(255, 215, 0, 50); border: 2px solid gold; }");
@@ -412,7 +412,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     middleButtonLayout->addWidget(pickMusicButton);
 
     chooseBackgroundButton = new QPushButton(mainWidget);
-    chooseBackgroundButton->setIcon(QIcon("icons/choose.png"));
+    chooseBackgroundButton->setIcon(QIcon(":/icons/choose.png"));
     chooseBackgroundButton->setIconSize(QSize(32, 32));
     chooseBackgroundButton->setFixedSize(40, 40);
     chooseBackgroundButton->setStyleSheet("QPushButton { background-color: transparent; border: 2px solid gold; border-radius: 10px; padding: 5px; } QPushButton:hover { background-color: rgba(255, 215, 0, 50); border: 2px solid gold; }");
@@ -437,7 +437,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     mainWidgetLayout->addLayout(dropdownLayout);
 
     // Version label
-    versionLabel = new QLabel("Apex Gamester v1.0 build 07-03-2025 ", mainWidget);
+    versionLabel = new QLabel("Apex Gamester v1.0 build 09-03-2025 ", mainWidget);
     versionLabel->setStyleSheet("QLabel { color: gold; font-size: 20px; text-decoration: underline; font-weight: bold; } QLabel:hover { color: white; text-decoration: none; }");
     versionLabel->setAlignment(Qt::AlignRight | Qt::AlignBottom);
     versionLabel->setCursor(Qt::PointingHandCursor);
@@ -470,9 +470,9 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
 
     // System menu
     systemMenu = new QMenu(this);
-    QAction *signOutAction = systemMenu->addAction(QIcon("icons/signout.png"), "Sign Out");
-    QAction *rebootAction = systemMenu->addAction(QIcon("icons/reboot.png"), "Reboot");
-    QAction *shutdownAction = systemMenu->addAction(QIcon("icons/shutdown.png"), "Shutdown");
+    QAction *signOutAction = systemMenu->addAction(QIcon(":/icons/signout.png"), "Sign Out");
+    QAction *rebootAction = systemMenu->addAction(QIcon(":/icons/reboot.png"), "Reboot");
+    QAction *shutdownAction = systemMenu->addAction(QIcon(":/icons/shutdown.png"), "Shutdown");
 
     connect(signOutAction, &QAction::triggered, this, &AppLauncher::handleSignOut);
     connect(rebootAction, &QAction::triggered, this, &AppLauncher::handleReboot);
@@ -527,12 +527,12 @@ void AppLauncher::openBrowserTab() {
     webView->setUrl(QUrl("https://www.google.com"));
 
     QHBoxLayout *navLayout = new QHBoxLayout();
-    QPushButton *backButton = new QPushButton(QIcon("icons/back.png"), "", tabWidget);
-    QPushButton *forwardButton = new QPushButton(QIcon("icons/forward.png"), "", tabWidget);
-    QPushButton *refreshButton = new QPushButton(QIcon("icons/refresh.png"), "", tabWidget);
-    QPushButton *saveButton = new QPushButton(QIcon("icons/save.png"), "", tabWidget);
-    QPushButton *bookmarkButton = new QPushButton(QIcon("icons/bookmark.png"), "", tabWidget);
-    QPushButton *hideButton = new QPushButton(QIcon("icons/hide.png"), "", tabWidget);
+    QPushButton *backButton = new QPushButton(QIcon(":/icons/back.png"), "", tabWidget);
+    QPushButton *forwardButton = new QPushButton(QIcon(":/icons/forward.png"), "", tabWidget);
+    QPushButton *refreshButton = new QPushButton(QIcon(":/icons/refresh.png"), "", tabWidget);
+    QPushButton *saveButton = new QPushButton(QIcon(":/icons/save.png"), "", tabWidget);
+    QPushButton *bookmarkButton = new QPushButton(QIcon(":/icons/bookmark.png"), "", tabWidget);
+    QPushButton *hideButton = new QPushButton(QIcon(":/icons/hide.png"), "", tabWidget);
     QLineEdit *urlBar = new QLineEdit(tabWidget);
 
     navLayout->addWidget(backButton);
@@ -765,7 +765,7 @@ void AppLauncher::setBackgroundImage(const QString &imagePath) {
 }
 
 void AppLauncher::setSearchButtonIcon() {
-    QString iconPath = "icons/search.png";
+    QString iconPath = ":/icons/search.png";
     if (QFile::exists(iconPath)) {
         QIcon icon(iconPath);
         searchButton->setIcon(icon);
@@ -900,7 +900,7 @@ void AppLauncher::addApplication(const QString &name, const QString &exec, const
 }
 
 void AppLauncher::launchApplication(const QString &exec) {
-    playSound("sounds/choice.mp3"); // Play choice sound when selecting an application
+    playSound(":/sounds/choice.mp3"); // Play choice sound when selecting an application
 
     QProcess *process = new QProcess(this);
     process->start("bash", QStringList() << "-c" << "hyprctl dispatch workspace 3 && " + exec);
@@ -1009,7 +1009,7 @@ void AppLauncher::handleSignOut() {
     bool ok;
     QString password = QInputDialog::getText(this, "Sign Out", "Enter sudo password:", QLineEdit::Password, "", &ok);
     if (ok && !password.isEmpty()) {
-        playSound("sounds/shutdown.mp3"); // Play shutdown sound
+        playSound(":/sounds/shutdown.mp3"); // Play shutdown sound
         showNotification("Signing out...");
 
         QProcess process;
@@ -1022,7 +1022,7 @@ void AppLauncher::handleReboot() {
     bool ok;
     QString password = QInputDialog::getText(this, "Reboot", "Enter sudo password:", QLineEdit::Password, "", &ok);
     if (ok && !password.isEmpty()) {
-        playSound("sounds/shutdown.mp3"); // Play shutdown sound
+        playSound(":/sounds/shutdown.mp3"); // Play shutdown sound
         showNotification("Rebooting...");
 
         QProcess process;
@@ -1035,7 +1035,7 @@ void AppLauncher::handleShutdown() {
     bool ok;
     QString password = QInputDialog::getText(this, "Shutdown", "Enter sudo password:", QLineEdit::Password, "", &ok);
     if (ok && !password.isEmpty()) {
-        playSound("sounds/shutdown.mp3"); // Play shutdown sound
+        playSound(":/sounds/shutdown.mp3"); // Play shutdown sound
         showNotification("Shutting down...");
 
         QProcess process;
@@ -1148,12 +1148,12 @@ void AppLauncher::handlePlayPauseClick() {
     QString musicPath = "/opt/claudemods-ApexTools/ApexGamester/media/" + selectedMusic;
     if (isPlaying) {
         musicPlayer->pause();
-        playPauseButton->setIcon(QIcon("icons/play.png"));
+        playPauseButton->setIcon(QIcon(":/icons/play.png"));
         isPlaying = false;
     } else {
         musicPlayer->setSource(QUrl::fromLocalFile(musicPath));
         musicPlayer->play();
-        playPauseButton->setIcon(QIcon("icons/pause.png"));
+        playPauseButton->setIcon(QIcon(":/icons/pause.png"));
         isPlaying = true;
     }
 }
@@ -1184,7 +1184,7 @@ void AppLauncher::playSound(const QString &soundFile) {
     QMediaPlayer *soundPlayer = new QMediaPlayer(this);
     QAudioOutput *soundOutput = new QAudioOutput(this);
     soundPlayer->setAudioOutput(soundOutput);
-    soundPlayer->setSource(QUrl::fromLocalFile(soundFile));
+    soundPlayer->setSource(QUrl(soundFile));
     soundPlayer->play();
 }
 
@@ -1198,7 +1198,7 @@ void AppLauncher::handleRecordClick() {
         // Stop recording
         executeBashCommand("pkill ffmpeg");
         isRecording = false;
-        recordButton->setIcon(QIcon("icons/record.png"));
+        recordButton->setIcon(QIcon(":/icons/record.png"));
         recordButton->setToolTip("Record Screen");
         QMessageBox::information(this, "Recording Saved", "Video saved in " + QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
     } else {
@@ -1206,7 +1206,7 @@ void AppLauncher::handleRecordClick() {
         QMessageBox::StandardButton reply = QMessageBox::question(this, "Record Screen", "Do you want to record your screen and mic?", QMessageBox::Yes | QMessageBox::No);
         if (reply == QMessageBox::Yes) {
             isRecording = true;
-            recordButton->setIcon(QIcon("icons/pauserecord.png"));
+            recordButton->setIcon(QIcon(":/icons/pauserecord.png"));
             recordButton->setToolTip("Pause Recording");
             QString outputFile = QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/recording.mp4";
             executeBashCommand("ffmpeg -f x11grab -video_size 1920x1080 -framerate 30 -i :0.0 -f pulse -i default -c:v libx264 -preset ultrafast -c:a aac " + outputFile);
