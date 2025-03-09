@@ -10,12 +10,14 @@
   <a href="https://www.linux.org" target="_blank"><img src="https://img.shields.io/badge/OS-Linux-e06c75?style=for-the-badge&logo=linux" /></a>
 	<a href="https://archlinux.org" target="_blank"><img src="https://img.shields.io/badge/DISTRO-Arch-56b6c2?style=for-the-badge&logo=arch-linux" /></a>	
 <a href="https://cachyos.org/" target="_blank"><img src="https://img.shields.io/badge/DISTRO-CachyOS-00FFFF?style=for-the-badge&logo=CachyOS" /></a>						
-></a>
-</a>
-  <a href="https://chat.deepseek.com/" target="_blank">
-  <img src="https://img.shields.io/badge/Built_Using-DeepSeek-4D6BFE?style=for-the-badge&logo=deepseek&logoColor=4D6BFE" alt="Built Using DeepSeek">
-  <img src="https://i.postimg.cc/ydBbyvRt/Deepseek.jpg" alt="DeepSeek Logo" style="height: 30px; vertical-align: middle;">
-</a>
+<div align="center" style="line-height: 3;">
+  <a href="https://www.deepseek.com/" target="_blank">
+    <img 
+      alt="Homepage" 
+      src="https://i.postimg.cc/Hs2vbbZ8/Deep-Seek-Homepage.png?raw=true" 
+      style="height: 30px; width: auto;" 
+    />
+  </a>
 
 <div align="center">
 	
