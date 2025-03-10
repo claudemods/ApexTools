@@ -77,6 +77,7 @@ private slots:
     void onVolumeSliderValueChanged(int value);
     void handleScreenshotClick();
     void handleRecordClick();
+    void playButtonSound();
 
 private:
     QLineEdit *searchBar;
@@ -112,9 +113,9 @@ private:
     QWidget *mainWidget;
     QPushButton *activeMenuButton;
     QLabel *menuLabel;
-    QList<QProcess*> activeProcesses; // Track active processes
+    QList<QProcess*> activeProcesses;
     QSlider *volumeSlider;
-    QLabel *volumePercentageLabel; // Label to display volume percentage
+    QLabel *volumePercentageLabel;
     bool isRecording;
 
     QString readImagePathFromFile(const QString &filePath);
@@ -154,7 +155,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     background = new QLabel(mainWidget);
     setBackgroundImage("background.txt");
     background->setGeometry(0, 0, width(), height());
-    background->lower(); // Ensure the background is at the bottom
+    background->lower();
 
     // Top bar layout
     QHBoxLayout *topBarLayout = new QHBoxLayout();
@@ -168,6 +169,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     terminalButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
     terminalButton->setToolTip("Open Terminal");
     connect(terminalButton, &QPushButton::clicked, this, &AppLauncher::handleOpenTerminal);
+    connect(terminalButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     topBarLayout->addWidget(terminalButton, 0, Qt::AlignLeft);
 
     screenshotButton = new QPushButton(mainWidget);
@@ -177,6 +179,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     screenshotButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
     screenshotButton->setToolTip("Take Screenshot");
     connect(screenshotButton, &QPushButton::clicked, this, &AppLauncher::handleScreenshotClick);
+    connect(screenshotButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     topBarLayout->addWidget(screenshotButton, 0, Qt::AlignLeft);
 
     recordButton = new QPushButton(mainWidget);
@@ -186,6 +189,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     recordButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
     recordButton->setToolTip("Record Screen");
     connect(recordButton, &QPushButton::clicked, this, &AppLauncher::handleRecordClick);
+    connect(recordButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     topBarLayout->addWidget(recordButton, 0, Qt::AlignLeft);
 
     topBarLayout->addStretch();
@@ -197,9 +201,9 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     updateButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
     updateButton->setToolTip("Update System");
     connect(updateButton, &QPushButton::clicked, this, &AppLauncher::handleUpdateSystem);
+    connect(updateButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     topBarLayout->addWidget(updateButton, 0, Qt::AlignRight);
 
-    // Volume button and slider
     volumeButton = new QPushButton(mainWidget);
     volumeButton->setIcon(QIcon(":/icons/sound.png"));
     volumeButton->setIconSize(QSize(32, 32));
@@ -207,9 +211,9 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     volumeButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
     volumeButton->setToolTip("Change Volume");
     connect(volumeButton, &QPushButton::clicked, this, &AppLauncher::handleChangeVolume);
+    connect(volumeButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     topBarLayout->addWidget(volumeButton, 0, Qt::AlignRight);
 
-    // Volume slider layout below the volume button
     QVBoxLayout *volumeSliderLayout = new QVBoxLayout();
     volumeSliderLayout->setAlignment(Qt::AlignRight);
     volumeSliderLayout->setSpacing(0);
@@ -223,7 +227,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
         "QSlider::groove:horizontal { background: gold; height: 10px; border-radius: 5px; } "
         "QSlider::handle:horizontal { background: teal; width: 20px; height: 20px; margin: -5px 0; border-radius: 10px; }"
     );
-    volumeSlider->setVisible(false); // Initially hidden
+    volumeSlider->setVisible(false);
     connect(volumeSlider, &QSlider::valueChanged, this, &AppLauncher::onVolumeSliderValueChanged);
 
     volumeSliderLayout->addWidget(volumeSlider);
@@ -240,6 +244,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     systemMenuButton->setFixedSize(40, 40);
     systemMenuButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
     systemMenuButton->setToolTip("System Menu");
+    connect(systemMenuButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     topBarLayout->addWidget(systemMenuButton, 0, Qt::AlignRight);
 
     mainWidgetLayout->addLayout(topBarLayout);
@@ -275,6 +280,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     searchButton->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
     searchButton->setToolTip("Open Browser Tab");
     connect(searchButton, &QPushButton::clicked, this, &AppLauncher::openBrowserTab);
+    connect(searchButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     searchLayout->addWidget(searchButton);
 
     searchButton->raise();
@@ -400,6 +406,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     playPauseButton->setStyleSheet("QPushButton { background-color: transparent; border: 2px solid gold; border-radius: 10px; padding: 5px; } QPushButton:hover { background-color: rgba(255, 215, 0, 50); border: 2px solid gold; }");
     playPauseButton->setToolTip("Play/Pause Music");
     connect(playPauseButton, &QPushButton::clicked, this, &AppLauncher::handlePlayPauseClick);
+    connect(playPauseButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     middleButtonLayout->addWidget(playPauseButton);
 
     pickMusicButton = new QPushButton(mainWidget);
@@ -409,6 +416,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     pickMusicButton->setStyleSheet("QPushButton { background-color: transparent; border: 2px solid gold; border-radius: 10px; padding: 5px; } QPushButton:hover { background-color: rgba(255, 215, 0, 50); border: 2px solid gold; }");
     pickMusicButton->setToolTip("Pick Music");
     connect(pickMusicButton, &QPushButton::clicked, this, &AppLauncher::handlePickMusicClick);
+    connect(pickMusicButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     middleButtonLayout->addWidget(pickMusicButton);
 
     chooseBackgroundButton = new QPushButton(mainWidget);
@@ -418,6 +426,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     chooseBackgroundButton->setStyleSheet("QPushButton { background-color: transparent; border: 2px solid gold; border-radius: 10px; padding: 5px; } QPushButton:hover { background-color: rgba(255, 215, 0, 50); border: 2px solid gold; }");
     chooseBackgroundButton->setToolTip("Choose Background");
     connect(chooseBackgroundButton, &QPushButton::clicked, this, &AppLauncher::handleChooseBackgroundClick);
+    connect(chooseBackgroundButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
     middleButtonLayout->addWidget(chooseBackgroundButton);
 
     mainWidgetLayout->addLayout(middleButtonLayout);
@@ -437,7 +446,7 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     mainWidgetLayout->addLayout(dropdownLayout);
 
     // Version label
-    versionLabel = new QLabel("Apex Gamester v1.0 build 09-03-2025 ", mainWidget);
+    versionLabel = new QLabel("Apex Gamester v1.0 build 07-03-2025 ", mainWidget);
     versionLabel->setStyleSheet("QLabel { color: gold; font-size: 20px; text-decoration: underline; font-weight: bold; } QLabel:hover { color: white; text-decoration: none; }");
     versionLabel->setAlignment(Qt::AlignRight | Qt::AlignBottom);
     versionLabel->setCursor(Qt::PointingHandCursor);
@@ -509,6 +518,14 @@ AppLauncher::AppLauncher(QWidget *parent) : QWidget(parent), isPlaying(false), a
     volumeSlider->setStyleSheet("QSlider::groove:horizontal { background: gold; height: 10px; border-radius: 5px; } QSlider::handle:horizontal { background: teal; width: 20px; height: 20px; margin: -5px 0; border-radius: 10px; }");
     volumeSlider->setVisible(false);
     connect(volumeSlider, &QSlider::valueChanged, this, &AppLauncher::onVolumeSliderValueChanged);
+}
+
+void AppLauncher::playButtonSound() {
+    QMediaPlayer *player = new QMediaPlayer(this);
+    QAudioOutput *audio = new QAudioOutput(this);
+    player->setAudioOutput(audio);
+    player->setSource(QUrl("qrc:/sounds/choice.mp3"));
+    player->play();
 }
 
 void AppLauncher::openBrowserTab() {
@@ -779,11 +796,12 @@ void AppLauncher::addIconButton(QHBoxLayout *layout, const QString &iconPath, co
     button->setIcon(QIcon(iconPath));
     button->setIconSize(QSize(64, 64));
     button->setFixedSize(80, 80); // Fixed: Removed extra ')'
-    button->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
-    button->setToolTip(tooltip);
-    connect(button, SIGNAL(clicked()), this, slot);
-    button->installEventFilter(this);
-    layout->addWidget(button);
+            button->setStyleSheet("QPushButton { background-color: transparent; border: none; }");
+            button->setToolTip(tooltip);
+            connect(button, SIGNAL(clicked()), this, slot);
+            connect(button, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
+            button->installEventFilter(this);
+            layout->addWidget(button);
 }
 
 void AppLauncher::playClickSound() {
@@ -844,25 +862,26 @@ void AppLauncher::populateMenu(const QString &menuName) {
         appButton->setIcon(QIcon(iconPath));
         appButton->setIconSize(QSize(64, 64));
         appButton->setFixedSize(80, 80); // Fixed: Removed extra ')'
-        appButton->setStyleSheet("QPushButton { background-color: transparent; border: none; } QPushButton:hover { background-color: rgba(255, 255, 255, 50); border: 2px solid gold; border-radius: 10px; }");
-        connect(appButton, &QPushButton::clicked, [this, exec]() { launchApplication(exec); });
+            appButton->setStyleSheet("QPushButton { background-color: transparent; border: none; } QPushButton:hover { background-color: rgba(255, 255, 255, 50); border: 2px solid gold; border-radius: 10px; }");
+            connect(appButton, &QPushButton::clicked, [this, exec]() { launchApplication(exec); });
+            connect(appButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
 
-        // Create the application name label
-        QLabel *appLabel = new QLabel(appName, appWidget);
-        appLabel->setAlignment(Qt::AlignCenter);
-        appLabel->setStyleSheet("QLabel { color: gold; font-size: 16px; }");
+            // Create the application name label
+            QLabel *appLabel = new QLabel(appName, appWidget);
+            appLabel->setAlignment(Qt::AlignCenter);
+            appLabel->setStyleSheet("QLabel { color: gold; font-size: 16px; }");
 
-        // Add the icon and label to the layout
-        appLayout->addWidget(appButton);
-        appLayout->addWidget(appLabel);
+            // Add the icon and label to the layout
+            appLayout->addWidget(appButton);
+            appLayout->addWidget(appLabel);
 
-        // Add the container widget to the grid
-        appGridLayout->addWidget(appWidget, row, col);
-        col++;
-        if (col >= 5) { // Adjust the number of columns as needed
-            col = 0;
-            row++;
-        }
+            // Add the container widget to the grid
+            appGridLayout->addWidget(appWidget, row, col);
+            col++;
+            if (col >= 5) { // Adjust the number of columns as needed
+                col = 0;
+                row++;
+            }
     }
 
     // Ensure the app grid is visible and doesn't overlap with other elements
@@ -880,23 +899,24 @@ void AppLauncher::addApplication(const QString &name, const QString &exec, const
     appButton->setIcon(QIcon(icon));
     appButton->setIconSize(QSize(64, 64));
     appButton->setFixedSize(80, 80); // Fixed: Removed extra ')'
-    appButton->setStyleSheet("QPushButton { background-color: transparent; border: none; } QPushButton:hover { background-color: rgba(255, 255, 255, 50); border: 2px solid gold; border-radius: 10px; }");
-    connect(appButton, &QPushButton::clicked, [this, exec]() { launchApplication(exec); });
+            appButton->setStyleSheet("QPushButton { background-color: transparent; border: none; } QPushButton:hover { background-color: rgba(255, 255, 255, 50); border: 2px solid gold; border-radius: 10px; }");
+            connect(appButton, &QPushButton::clicked, [this, exec]() { launchApplication(exec); });
+            connect(appButton, &QPushButton::clicked, this, &AppLauncher::playButtonSound);
 
-    QLabel *appLabel = new QLabel(name, appWidget);
-    appLabel->setAlignment(Qt::AlignCenter);
-    appLabel->setStyleSheet("QLabel { color: gold; font-size: 16px; }");
+            QLabel *appLabel = new QLabel(name, appWidget);
+            appLabel->setAlignment(Qt::AlignCenter);
+            appLabel->setStyleSheet("QLabel { color: gold; font-size: 16px; }");
 
-    appLayout->addWidget(appButton);
-    appLayout->addWidget(appLabel);
+            appLayout->addWidget(appButton);
+            appLayout->addWidget(appLabel);
 
-    int row = appGridLayout->rowCount();
-    int col = appGridLayout->columnCount();
-    if (col >= 5) {
-        col = 0;
-        row++;
-    }
-    appGridLayout->addWidget(appWidget, row, col);
+            int row = appGridLayout->rowCount();
+            int col = appGridLayout->columnCount();
+            if (col >= 5) {
+                col = 0;
+                row++;
+            }
+            appGridLayout->addWidget(appWidget, row, col);
 }
 
 void AppLauncher::launchApplication(const QString &exec) {
