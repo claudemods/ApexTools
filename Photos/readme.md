@@ -2,7 +2,8 @@
 
 loading screen
 
-![Screenshot_archlinux-2_2025-06-03_09:17:15](https://github.com/user-attachments/assets/90e7fed6-c7e2-43ff-a02f-305c4175a7a1)
+![Screenshot_archlinux-2_2025-06-03_09:19:00](https://github.com/user-attachments/assets/55dd43ce-8ef7-4d45-8426-050c6de1cd41)
+
 
 
  
