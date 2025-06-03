@@ -2,7 +2,8 @@
 
 loading screen
 
-![Screenshot_archlinux-2_2025-06-03_09:17:15](https://github.com/user-attachments/assets/4f8c5e43-8993-4f38-b650-6ddff1d9215b)
+![Screenshot_archlinux-2_2025-06-03_09:17:15](https://github.com/user-attachments/assets/90e7fed6-c7e2-43ff-a02f-305c4175a7a1)
+
 
  
  Main Menu
